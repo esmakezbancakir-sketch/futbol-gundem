@@ -6,4 +6,6 @@ data/
 *.db
 .env
 .env.local
+.deploy_secrets.local
+docker-compose.deploy.yml
 hz/

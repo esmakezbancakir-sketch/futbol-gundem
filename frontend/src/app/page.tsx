@@ -1,7 +1,7 @@
 import { getTopics } from "@/lib/api";
 import { TopicCard } from "@/components/TopicCard";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const topics = await getTopics();

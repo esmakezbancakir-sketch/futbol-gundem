@@ -13,9 +13,12 @@ export async function getTopics(competition?: string): Promise<Topic[]> {
   const url = new URL("/api/topics", API_URL);
   if (competition) url.searchParams.set("competition", competition);
 
-  const res = await fetch(url, { next: { revalidate: 300 } });
-  if (!res.ok) return [];
-
-  const data = await res.json();
-  return data.topics as Topic[];
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.topics as Topic[];
+  } catch {
+    return [];
+  }
 }

@@ -5,7 +5,6 @@ import feedparser
 FEEDS = [
     {"name": "BBC Sport Football", "url": "https://feeds.bbci.co.uk/sport/football/rss.xml"},
     {"name": "Sky Sports Football", "url": "https://www.skysports.com/rss/12040"},
-    {"name": "ESPN Soccer", "url": "https://www.espn.com/espn/rss/soccer/news"},
     {"name": "The Guardian Football", "url": "https://www.theguardian.com/football/rss"},
 ]
 
